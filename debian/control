@@ -61,7 +61,7 @@ Description: Video Decode and Presentation API for Unix (documentation)
 
 Package: libvdpau-driver
 Architecture: all
-Depends: nvidia-libvdpau1-driver, ${misc:Depends}
+Depends: nvidia-libvdpau1-driver [amd64 i386], ${misc:Depends}
 Description: Video Decode and Presentation API for Unix (driver metapackage)
  VDPAU (Video Decode and Presentation API for Unix) is an open source library
  (libvdpau) and API designed by NVIDIA originally for its GeForce 8 series and
