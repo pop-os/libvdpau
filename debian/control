@@ -1,5 +1,5 @@
 Source: libvdpau
-Section: libs
+Section: contrib/libs
 Priority: optional
 Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
 Uploaders: Jean-Yves Avenard <jyavenard@gmail.com>,
@@ -14,7 +14,7 @@ Vcs-Browser: http://svn.debian.org/wsvn/pkg-nvidia/packages/libvdpau/?op=log
 
 Package: libvdpau-dev
 Architecture: all
-Section: libdevel
+Section: contrib/libdevel
 Depends: libvdpau1 (>= ${source:Version}), ${misc:Depends}
 Replaces: nvidia-libvdpau-dev
 Conflicts: nvidia-libvdpau-dev
@@ -31,7 +31,8 @@ Description: Video Decode and Presentation API for Unix (development files)
 
 Package: libvdpau1
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: libvdpau-driver (= ${source:Version}), ${shlibs:Depends},
+ ${misc:Depends}
 Replaces: nvidia-libvdpau, nvidia-libvdpau1, nvidia-libvdpau-ia32
 Conflicts: nvidia-libvdpau, nvidia-libvdpau1, nvidia-libvdpau-ia32
 Description: Video Decode and Presentation API for Unix (libraries)
@@ -46,7 +47,7 @@ Description: Video Decode and Presentation API for Unix (libraries)
 
 Package: libvdpau-doc
 Architecture: all
-Section: doc
+Section: contrib/doc
 Depends: ${misc:Depends}
 Description: Video Decode and Presentation API for Unix (documentation)
  VDPAU (Video Decode and Presentation API for Unix) is an open source library
@@ -57,3 +58,17 @@ Description: Video Decode and Presentation API for Unix (documentation)
  video post-processing to the GPU video-hardware.
  .
  This package contains the VDPAU documentation.
+
+Package: libvdpau-driver
+Architecture: all
+Depends: nvidia-libvdpau1-driver, ${misc:Depends}
+Description: Video Decode and Presentation API for Unix (driver metapackage)
+ VDPAU (Video Decode and Presentation API for Unix) is an open source library
+ (libvdpau) and API designed by NVIDIA originally for its GeForce 8 series and
+ later GPU hardware, targeted at the X Window System on Unix operating-systems
+ (including Linux, FreeBSD, and Solaris). This VDPAU API
+ allows video programs to offload portions of the video decoding process and
+ video post-processing to the GPU video-hardware.
+ .
+ This package is a metapackage meant to be used to install an implementation of
+ a VDPAU driver.
