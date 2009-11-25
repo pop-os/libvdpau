@@ -1,6 +1,7 @@
-libvdpau (0.3-1) UNRELEASED; urgency=low
+libvdpau (0.3-1) unstable; urgency=low
 
+  [ Andres Mejia ]
   * Initial release.
     (Closes: #549626)
 
- -- Andres Mejia <mcitadel@gmail.com>  Fri, 20 Nov 2009 16:14:42 -0500
+ -- Randall Donald <rdonald@debian.org>  Wed, 25 Nov 2009 10:30:10 -0800
