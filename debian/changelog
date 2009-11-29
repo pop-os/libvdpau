@@ -1,7 +1,9 @@
 libvdpau (0.3-2) unstable; urgency=low
 
   * Have libvdpau1 suggest a vdpau driver package to install, rather than
-    depend on one. (Closes: #558464)
+    depend on one.
+    (Closes: #558434)
+    (Closes: #558464)
   * Remove libvdpau-driver package.
   * Move libvdpau to main.
 
