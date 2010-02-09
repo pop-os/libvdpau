@@ -1,4 +1,10 @@
 #!/usr/bin/make -f
 
+CONFIGURE_OPTIONS ?= --enable-documentation
+
 %:
 	dh $@
+
+override_dh_auto_configure:
+	dh_testdir
+	./configure --prefix=/usr $(CONFIGURE_OPTIONS)
