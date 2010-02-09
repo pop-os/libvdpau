@@ -7,7 +7,7 @@ Uploaders: Jean-Yves Avenard <jyavenard@gmail.com>,
 DM-Upload-Allowed: yes
 Build-Depends: debhelper (>= 7.0.50), pkg-config, libx11-dev,
  doxygen, graphviz, texlive-base-bin,
-Standards-Version: 3.8.3
+Standards-Version: 3.8.4
 Homepage: http://cgit.freedesktop.org/~aplattner/libvdpau
 Vcs-Svn: svn://svn.debian.org/svn/pkg-nvidia/packages/libvdpau
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-nvidia/packages/libvdpau/?op=log
