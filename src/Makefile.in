@@ -72,8 +72,10 @@ am__installdirs = "$(DESTDIR)$(libdir)" \
 	"$(DESTDIR)$(libvdpauincludedir)"
 LTLIBRARIES = $(lib_LTLIBRARIES)
 am__DEPENDENCIES_1 =
-libvdpau_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_libvdpau_la_OBJECTS = vdpau_wrapper.lo
+libvdpau_la_DEPENDENCIES = $(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+am__libvdpau_la_SOURCES_DIST = vdpau_wrapper.c mesa_dri2.c mesa_dri2.h
+@DRI2_TRUE@am__objects_1 = mesa_dri2.lo
+am_libvdpau_la_OBJECTS = vdpau_wrapper.lo $(am__objects_1)
 libvdpau_la_OBJECTS = $(am_libvdpau_la_OBJECTS)
 libvdpau_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
@@ -92,7 +94,7 @@ LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
 SOURCES = $(libvdpau_la_SOURCES)
-DIST_SOURCES = $(libvdpau_la_SOURCES)
+DIST_SOURCES = $(am__libvdpau_la_SOURCES_DIST)
 HEADERS = $(libvdpauinclude_HEADERS)
 ETAGS = etags
 CTAGS = ctags
@@ -169,6 +171,8 @@ STRIP = @STRIP@
 VERSION = @VERSION@
 X11_CFLAGS = @X11_CFLAGS@
 X11_LIBS = @X11_LIBS@
+XEXT_CFLAGS = @XEXT_CFLAGS@
+XEXT_LIBS = @XEXT_LIBS@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
 abs_top_builddir = @abs_top_builddir@
@@ -192,6 +196,8 @@ datadir = @datadir@
 datarootdir = @datarootdir@
 distcleancheck_listfiles = @distcleancheck_listfiles@
 docdir = @docdir@
+dri2proto_CFLAGS = @dri2proto_CFLAGS@
+dri2proto_LIBS = @dri2proto_LIBS@
 dvidir = @dvidir@
 exec_prefix = @exec_prefix@
 host = @host@
@@ -227,14 +233,21 @@ top_srcdir = @top_srcdir@
 AM_CFLAGS = \
     -I$(top_srcdir)/include \
     -DVDPAU_MODULEDIR="\"$(moduledir)\"" \
-    $(X11_CFLAGS)
+    $(X11_CFLAGS) \
+    $(XEXT_CFLAGS)
 
 lib_LTLIBRARIES = libvdpau.la
 libvdpau_la_SOURCES = \
-    vdpau_wrapper.c
+    vdpau_wrapper.c \
+    $(DRI2_SOURCES)
+
+@DRI2_TRUE@DRI2_SOURCES = \
+@DRI2_TRUE@        mesa_dri2.c \
+@DRI2_TRUE@        mesa_dri2.h
 
 libvdpau_la_LIBADD = \
-    $(DLOPEN_LIBS)
+    $(DLOPEN_LIBS) \
+    $(XEXT_LIBS)
 
 libvdpau_la_LDFLAGS = -version-info 1:0:0 -no-undefined
 libvdpauincludedir = $(includedir)/vdpau
@@ -316,6 +329,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mesa_dri2.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/vdpau_wrapper.Plo@am__quote@
 
 .c.o:

@@ -1,3 +1,61 @@
+commit 76fdf83a7690ce366edbd4816b3c4b6728eeb9ee
+Author: Aaron Plattner <aplattner@nvidia.com>
+Date:   Thu Jan 28 15:01:25 2010 -0800
+
+    Bump version to 0.4
+    
+    Signed-off-by: Aaron Plattner <aplattner@nvidia.com>
+
+commit 341c7e49b8c98f1a7b1a3ae719f15acd694719ca
+Author: Stephen Warren <swarren@nvidia.com>
+Date:   Thu Jan 28 15:00:32 2010 -0800
+
+    trace: Fix a picture info bracket mismatch.
+    
+    Signed-off-by: Aaron Plattner <aplattner@nvidia.com>
+
+commit f3bbd295d310d6ea44f00fa6c787a7427f01cd05
+Author: Stephen Warren <swarren@nvidia.com>
+Date:   Thu Jan 28 14:58:40 2010 -0800
+
+    YV12 documentation fix.
+    
+    Signed-off-by: Aaron Plattner <aplattner@nvidia.com>
+
+commit 4e2b6f38f640f341ec49336aaaccfb136decbdff
+Author: Stephen Warren <swarren@nvidia.com>
+Date:   Thu Jan 28 14:56:59 2010 -0800
+
+    Documentation enhancements for Uoti from ffmpeg.
+    
+    Signed-off-by: Aaron Plattner <aplattner@nvidia.com>
+
+commit 97331f1c8ee7c83f0dd6dff0ecc5bc51bf78022b
+Author: Aaron Plattner <aplattner@nvidia.com>
+Date:   Wed Jan 27 18:17:23 2010 -0800
+
+    Update the COPYING copyright date to include recent changes
+    
+    Signed-off-by: Aaron Plattner <aplattner@nvidia.com>
+
+commit 3c02e5c68ef9480a0f9e5c3af5b09e6b3dcd981d
+Author: Aaron Plattner <aplattner@nvidia.com>
+Date:   Wed Jan 27 18:16:41 2010 -0800
+
+    Query DRI2 for the driver name.
+    
+    If the VDPAU_DRIVER environment variable is not set, use DRI2Connect to query
+    the VDPAU driver name from the X server.
+    
+    Signed-off-by: Aaron Plattner <aplattner@nvidia.com>
+    Reviewed-by: Stephen Warren <swarren@nvidia.com>
+
+commit a9c69d294ae41fffadb432caa66917a4e7d107a8
+Author: Aaron Plattner <aplattner@nvidia.com>
+Date:   Mon Dec 14 10:52:41 2009 -0800
+
+    $(docdir) apparently requires autoconf 2.60
+
 commit 72c3ea0d5705ac5b21e5096742d9ec57573e543d
 Author: Aaron Plattner <aplattner@nvidia.com>
 Date:   Fri Nov 20 11:54:36 2009 -0800
