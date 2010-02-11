@@ -1,3 +1,12 @@
+libvdpau (0.4-2) unstable; urgency=low
+
+  * Add dependencies for documentation to Build-Depends-Indep.
+  * Define a function in debian/rules that can be used to enable or disable
+    building of the documentation depending on if the necessary dependencies
+    are installed.
+
+ -- Andres Mejia <mcitadel@gmail.com>  Wed, 10 Feb 2010 19:53:29 -0500
+
 libvdpau (0.4-1) unstable; urgency=low
 
   * New upstream release.

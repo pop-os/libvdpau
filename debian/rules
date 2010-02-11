@@ -1,6 +1,13 @@
 #!/usr/bin/make -f
 
-CONFIGURE_OPTIONS ?= --enable-documentation
+# Used to enable documentation if dependencies are available
+define cond_enable
+	$(shell if test -x /usr/bin/doxygen && test -x /usr/bin/dot \
+		&& test -x /usr/bin/pdftex; then echo --enable-documentation; \
+		else echo --disable-documentation; fi )
+endef
+
+CONFIGURE_OPTIONS ?= $(call cond_enable)
 
 %:
 	dh $@
