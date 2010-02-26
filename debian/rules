@@ -7,7 +7,8 @@ define cond_enable
 		else echo --disable-documentation; fi )
 endef
 
-CONFIGURE_OPTIONS ?= $(call cond_enable)
+CONFIGURE_OPTIONS ?= $(call cond_enable) \
+		     --enable-dri2
 
 %:
 	dh $@
