@@ -1,3 +1,9 @@
+libvdpau (0.4-3) unstable; urgency=low
+
+  * Enable dri2 feature. Requires x11proto-dri2-dev (>= 2.2) and libxext-dev.
+
+ -- Andres Mejia <mcitadel@gmail.com>  Thu, 25 Feb 2010 20:08:17 -0500
+
 libvdpau (0.4-2) unstable; urgency=low
 
   * Add dependencies for documentation to Build-Depends-Indep.

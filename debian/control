@@ -6,6 +6,7 @@ Uploaders: Jean-Yves Avenard <jyavenard@gmail.com>,
            Andres Mejia <mcitadel@gmail.com>,
 DM-Upload-Allowed: yes
 Build-Depends: debhelper (>= 7.0.50), pkg-config, libx11-dev,
+ x11proto-dri2-dev (>= 2.2), libxext-dev,
 Build-Depends-Indep: doxygen, graphviz, texlive-binaries, texlive-base,
 Standards-Version: 3.8.4
 Homepage: http://cgit.freedesktop.org/~aplattner/libvdpau
