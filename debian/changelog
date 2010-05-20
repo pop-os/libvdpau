@@ -4,6 +4,7 @@ libvdpau (0.4-4) UNRELEASED; urgency=low
   * Build lib32vdpau1 [amd64], so we can replace nvidia-libvdpau-ia32.
     Build rules inspired by lib32z1. (Closes: #572206)
   * lib32vdpau1: take over postinst script from nvidia-libvdpau-ia32.
+  * Add lib{,32}vdpau1.symbols.
 
  -- Andreas Beckmann <debian@abeckmann.de>  Thu, 20 May 2010 10:43:18 +0200
 
