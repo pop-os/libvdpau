@@ -1,5 +1,5 @@
 #!/bin/sh
-# postinst script for nvidia-libvdpau1-ia32
+# postinst script for lib32vdpau1
 #
 # see: dh_installdeb(1)
 
