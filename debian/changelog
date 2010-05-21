@@ -6,6 +6,8 @@ libvdpau (0.4-4) UNRELEASED; urgency=low
   * lib32vdpau1: take over postinst script from nvidia-libvdpau-ia32.
   * Add lib{,32}vdpau1.symbols.
   * libvdpau-dev: do not ship /usr/lib/vdpau/libvdpau_trace.so, won't be used.
+  * libvdpau1: cleanup /usr/lib/libvdpau_trace.so left over by some old
+    versions of the nvidia-libvdpau* packages.
 
  -- Andreas Beckmann <debian@abeckmann.de>  Thu, 20 May 2010 10:43:18 +0200
 
