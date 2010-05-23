@@ -15,8 +15,10 @@ libvdpau (0.4-4) unstable; urgency=low
   * Convert debian/copyright to the DEP-5 format and add the slightly
     different license used for two of the source files.
   * Version the Conflicts and Replaces against nvidia-libvdpau1*.
+  * Also remove /usr/lib/libvdpau_nvidia.so, left by some old versions of
+    the nvidia-libvdpau* packages.
 
- -- Russ Allbery <rra@debian.org>  Sat, 22 May 2010 18:53:43 -0700
+ -- Russ Allbery <rra@debian.org>  Sat, 22 May 2010 19:11:37 -0700
 
 libvdpau (0.4-3) unstable; urgency=low
 
