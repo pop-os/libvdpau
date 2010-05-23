@@ -20,8 +20,8 @@ Section: libdevel
 Depends: libvdpau1 (>= ${source:Upstream-Version}),
          libvdpau1 (<< ${source:Upstream-Version}+1~),
          ${misc:Depends}
-Replaces: nvidia-libvdpau-dev
-Conflicts: nvidia-libvdpau-dev
+Replaces: nvidia-libvdpau-dev (<< 195.36.24-2)
+Conflicts: nvidia-libvdpau-dev (<< 195.36.24-2)
 Suggests: libvdpau-doc
 Description: Video Decode and Presentation API for Unix (development files)
  VDPAU (Video Decode and Presentation API for Unix) is an open source
