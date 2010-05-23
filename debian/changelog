@@ -1,6 +1,7 @@
 libvdpau (0.4-4) UNRELEASED; urgency=low
 
   [ Russ Allbery ]
+  * Link libvdpau with libX11 since it uses symbols from that library.
   * Add myself to Uploaders.
   * Convert debian/copyright to the DEP-5 format and add the slightly
     different license used for two of the source files.
