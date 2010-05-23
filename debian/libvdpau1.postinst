@@ -3,11 +3,13 @@
 
 set -e
 
-
 if [ "$1" = "configure" ]; then
 	# <target: squeeze>
 	if [ -L /usr/lib/libvdpau_trace.so ]; then
 		rm /usr/lib/libvdpau_trace.so || true
+	fi
+	if [ -L /usr/lib/libvdpau_nvidia.so ]; then
+		rm /usr/lib/libvdpau_nvidia.so || true
 	fi
 	# </target: squeeze>
 fi
