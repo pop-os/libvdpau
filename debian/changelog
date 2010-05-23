@@ -1,5 +1,8 @@
 libvdpau (0.4-4) UNRELEASED; urgency=low
 
+  [ Russ Allbery ]
+  * Add myself to Uploaders.
+  
   [ Andreas Beckmann ]
   * Build lib32vdpau1 [amd64], so we can replace nvidia-libvdpau-ia32.
     Build rules inspired by lib32z1. (Closes: #572206)
