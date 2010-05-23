@@ -36,8 +36,10 @@ Description: Video Decode and Presentation API for Unix (development files)
 Package: libvdpau1
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Replaces: nvidia-libvdpau, nvidia-libvdpau1, nvidia-libvdpau-ia32
-Conflicts: nvidia-libvdpau, nvidia-libvdpau1, nvidia-libvdpau-ia32
+Replaces: nvidia-libvdpau, nvidia-libvdpau-ia32,
+ nvidia-libvdpau1 (<< 195.36.24-2), nvidia-libvdpau1-ia32 (<< 195.36.24-2)
+Conflicts: nvidia-libvdpau, nvidia-libvdpau-ia32,
+ nvidia-libvdpau1 (<< 195.36.24-2), nvidia-libvdpau1-ia32 (<< 195.36.24-2)
 Suggests: nvidia-vdpau-driver [amd64 i386]
  | nvidia-vdpau-driver-ia32 [amd64]
  | vdpau-driver
@@ -54,8 +56,8 @@ Description: Video Decode and Presentation API for Unix (libraries)
 Package: lib32vdpau1
 Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Replaces: nvidia-libvdpau1-ia32
-Conflicts: nvidia-libvdpau1-ia32
+Replaces: nvidia-libvdpau1-ia32 (<< 195.36.24-2)
+Conflicts: nvidia-libvdpau1-ia32 (<< 195.36.24-2)
 Suggests: nvidia-vdpau-driver-ia32 [amd64] | vdpau-driver-ia32
 Description: Video Decode and Presentation API for Unix (32-bit libraries)
  VDPAU (Video Decode and Presentation API for Unix) is an open source
