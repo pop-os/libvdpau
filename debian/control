@@ -17,8 +17,9 @@ Vcs-Browser: http://svn.debian.org/wsvn/pkg-nvidia/packages/libvdpau/?op=log
 Package: libvdpau-dev
 Architecture: all
 Section: libdevel
-Depends: libvdpau1 (>= ${source:Upstream-Version}),
-         libvdpau1 (<< ${source:Upstream-Version}+1~),
+Depends: libvdpau1 (>= ${binary:Version}),
+         libvdpau1 (<= ${binary:Version}+b99),
+         libx11-dev,
          ${misc:Depends}
 Replaces: nvidia-libvdpau-dev (<< 195.36.24-2)
 Conflicts: nvidia-libvdpau-dev (<< 195.36.24-2)
