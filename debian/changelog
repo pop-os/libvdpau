@@ -9,6 +9,7 @@ libvdpau (0.4-5) UNRELEASED; urgency=low
     X11/Xlib.h.
   * Tighten the dependency of libvdpau-dev on libvdpau1 to only allow the
     matching binary:Version or binary NMUs thereof.
+  * Remove dh_make boilerplate code and comments from maintainer scripts.
 
  -- Russ Allbery <rra@debian.org>  Sat, 22 May 2010 19:32:29 -0700
 
