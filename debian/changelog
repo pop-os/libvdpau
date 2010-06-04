@@ -1,5 +1,7 @@
 libvdpau (0.4-5) UNRELEASED; urgency=low
 
+  * TODO: debian/copyright: Files: debian/*
+
   [ Russ Allbery ]
   * Also version the Conflicts and Replaces for libvdpau-dev so that the
     nvidia-libvdpau-dev transitional package will work properly.
