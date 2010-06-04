@@ -1,4 +1,4 @@
-libvdpau.so.1 libvdpau1 #MINVER#
+libvdpau.so.1 #PACKAGE# #MINVER#
  _vdp_DRI2Connect@Base 0.4
  _vdp_DRI2QueryExtension@Base 0.4
  _vdp_DRI2QueryVersion@Base 0.4
