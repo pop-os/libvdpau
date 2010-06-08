@@ -11,7 +11,7 @@ Build-Depends: debhelper (>= 7.0.50), pkg-config, libx11-dev,
 Build-Depends-Indep: doxygen, graphviz, texlive-binaries, texlive-base,
 Standards-Version: 3.8.4
 Homepage: http://cgit.freedesktop.org/~aplattner/libvdpau
-Vcs-Svn: svn://svn.debian.org/svn/pkg-nvidia/packages/libvdpau
+Vcs-Svn: svn://svn.debian.org/svn/pkg-nvidia/packages/libvdpau/trunk
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-nvidia/packages/libvdpau/?op=log
 
 Package: libvdpau-dev
