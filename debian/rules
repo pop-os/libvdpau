@@ -52,3 +52,6 @@ install32:
 clean:
 	dh clean
 	rm -rf debian/32
+
+get-orig-source:
+	$(dir $_)libvdpau-get-orig-source
