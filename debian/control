@@ -12,8 +12,8 @@ Build-Depends-Indep: doxygen, graphviz, texlive-base-bin | texlive-binaries,
  texlive-base,
 Standards-Version: 3.8.4
 Homepage: http://cgit.freedesktop.org/~aplattner/libvdpau
-Vcs-Svn: svn://svn.debian.org/svn/pkg-nvidia/packages/libvdpau/trunk
-Vcs-Browser: http://svn.debian.org/wsvn/pkg-nvidia/packages/libvdpau/?op=log
+Vcs-Git: git://git.debian.org/git/pkg-nvidia/libvdpau.git
+Vcs-Browser: http://git.debian.org/?p=pkg-nvidia/libvdpau.git
 
 Package: libvdpau-dev
 Architecture: all
