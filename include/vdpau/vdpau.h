@@ -6,7 +6,7 @@
 /*
  * This copyright notice applies to this header file:
  *
- * Copyright (c) 2008-2009 NVIDIA Corporation
+ * Copyright (c) 2008-2010 NVIDIA Corporation
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
@@ -372,12 +372,12 @@
  * The exact data that should be passed to VDPAU is detailed below for each
  * supported format:
  *
- * \subsection MPEG-1 and MPEG-2
+ * \subsection bitstream_mpeg1_mpeg2 MPEG-1 and MPEG-2
  *
  * Include all slices beginning with start codes 0x00000101 through
  * 0x000001AF. The slice start code must be included for all slices.
  *
- * \subsection H.264
+ * \subsection bitstream_h264 H.264
  *
  * Include all NALs with nal_unit_type of 1 or 5 (coded slice of non-IDR/IDR
  * picture respectively). The complete slice start code (including 0x000001
@@ -391,7 +391,7 @@
  * - Multiple bitstream buffer array entries (e.g. one per slice) may point at
  *   the same physical data storage for the slice start code prefix.
  *
- * \subsection VC-1 Simple and Main Profile
+ * \subsection bitstream_vc1_sp_mp VC-1 Simple and Main Profile
  *
  * VC-1 simple/main profile bitstreams always consist of a single slice per
  * picture, and do not use start codes to delimit pictures. Instead, the
@@ -405,7 +405,7 @@
  * this header information explicitly must not be included in the bitstream
  * data passed to VDPAU for this encoding format.
  *
- * \subsection VC-1 Advanced Profile
+ * \subsection bitstream_vc1_ap VC-1 Advanced Profile
  *
  * Include all slices beginning with start codes 0x0000010D (frame),
  * 0x0000010C (field) or 0x0000010B (slice). The slice start code should be
@@ -426,6 +426,11 @@
  * The bitstream passed to VDPAU should contain all original emulation
  * prevention bytes present in the original bitstream; do not remove these
  * from the bitstream.
+ *
+ * \subsection bitstream_mpeg4part2 MPEG-4 Part 2 and DivX
+ *
+ * Include all slices beginning with start codes 0x000001B6. The slice start
+ * code must be included for all slices.
  *
  * \section video_mixer_usage Video Mixer Usage
  *
@@ -469,7 +474,7 @@
  * determining the minimum required number of surfaces for optimal operation,
  * and the maximum number of useful surfaces, beyond which surfaces are not
  * used. It is recommended that in all cases other than plain bob/weave, at
- * least 2 past and 1 future frame be provided.
+ * least 2 past and 1 future field be provided.
  *
  * Note that it is entirely possible, in general, for any of the
  * \ref VdpVideoMixer "VdpVideoMixer" post-processing steps other than
@@ -615,13 +620,13 @@
  * decoded field rate. This mode of operation is thus referred to as
  * "half-rate".
  *
- * Implementations may choose whether to support half-rate de-interlacing mode
- * or not. Regular de-interlacing mode should be supported to any supported
- * advanced de-interlacing algorithm.
+ * Implementations may choose whether to support half-rate de-interlacing
+ * or not. Regular full-rate de-interlacing should be supported by any
+ * supported advanced de-interlacing algorithm.
  *
  * The descriptions of de-interlacing algorithms above assume that regular
  * (not half-rate) operation is being performed, when detailing the number of
-  "half-rate" de-interlacing is used.deoMixerRender calls.
+ * VdpVideoMixerRender calls.
  *
  * Recall that the concatenation of past/current/future surface lists simply
  * forms a window into the stream of decoded fields. To achieve standard
