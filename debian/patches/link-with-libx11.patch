@@ -14,8 +14,8 @@ which are provided by libX11, but wasn't linking with it directly, resulting
 in warnings during the package build (and possibly errors later with better
 linkers).
 
---- libvdpau.orig/src/Makefile.am
-+++ libvdpau/src/Makefile.am
+--- a/src/Makefile.am
++++ b/src/Makefile.am
 @@ -18,7 +18,8 @@
  
  libvdpau_la_LIBADD = \
