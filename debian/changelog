@@ -1,8 +1,13 @@
-libvdpau (0.4.1-1) UNRELEASED; urgency=low
+libvdpau (0.4.1-1) experimental; urgency=low
 
   * New upstream release.
+  * Refresh patches.
+  * Change Build-Depends of ia32-libs to ia32-libs-dev.
+  * Bump Standards-Version to 3.9.1. No other changes needed.
+  * Use proper Depends versioning for a binary-all package depending on
+    a binary-any package.
 
- -- Andres Mejia <mcitadel@gmail.com>  Sat, 18 Sep 2010 20:24:57 -0400
+ -- Andres Mejia <mcitadel@gmail.com>  Mon, 20 Sep 2010 13:43:43 -0400
 
 libvdpau (0.4-5) unstable; urgency=low
 
