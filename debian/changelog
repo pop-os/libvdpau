@@ -1,13 +1,16 @@
 libvdpau (0.4.1-1) experimental; urgency=low
 
   * New upstream release.
+  * Use script to generate latest source.
+  * Add get-orig-source rule that runs libvdpau-get-orig-source script.
+  * Update Vcs-* entries for new location for packaging.
   * Refresh patches.
   * Change Build-Depends of ia32-libs to ia32-libs-dev.
   * Bump Standards-Version to 3.9.1. No other changes needed.
   * Use proper Depends versioning for a binary-all package depending on
     a binary-any package.
 
- -- Andres Mejia <mcitadel@gmail.com>  Mon, 20 Sep 2010 13:43:43 -0400
+ -- Andres Mejia <mcitadel@gmail.com>  Mon, 20 Sep 2010 13:52:11 -0400
 
 libvdpau (0.4-5) unstable; urgency=low
 
