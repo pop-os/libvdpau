@@ -1,3 +1,10 @@
+libvdpau (0.4.1-2) unstable; urgency=high
+
+  * Provide an upload to unstable to fix build failure. (Closes: #603220)
+  * Set urgency to high so it enters testing ASAP.
+
+ -- Andres Mejia <mcitadel@gmail.com>  Fri, 12 Nov 2010 17:14:33 -0500
+
 libvdpau (0.4.1-1) experimental; urgency=low
 
   * New upstream release.
