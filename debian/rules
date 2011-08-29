@@ -3,6 +3,7 @@
 #export DH_VERBOSE=1
 
 DEB_HOST_ARCH       ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
+DEB_HOST_MULTIARCH  ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 # Used to enable documentation if dependencies are available
 define cond_enable
@@ -28,7 +29,8 @@ binary: binary-indep binary-arch ;
 
 override_dh_auto_configure: $(EXTRA_CONFIGURE)
 	dh_testdir
-	./configure --prefix=/usr $(CONFIGURE_OPTIONS)
+	./configure --prefix=/usr --libdir=/usr/lib/$(DEB_HOST_MULTIARCH) \
+		$(CONFIGURE_OPTIONS)
 
 configure32:
 	dh_testdir
