@@ -51,6 +51,9 @@ override_dh_auto_install: $(EXTRA_INSTALL)
 install32:
 	dh_auto_install --sourcedirectory=debian/32
 
+override_dh_installdocs:
+	dh_installdocs -X.md5
+
 clean:
 	dh clean
 	rm -rf debian/32
