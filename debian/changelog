@@ -4,6 +4,9 @@ libvdpau (0.4.1-3) UNRELEASED; urgency=low
   * Update to my @debian.org email.
 
   [ Andreas Beckmann ]
+  * Build for multiarch.  Based on patches from Daniel Schaal.
+    (Closes: #631174)
+  * Add fallback search patch /usr/lib/vdpau.
   * Add myself to Uploaders.
 
  -- Andreas Beckmann <debian@abeckmann.de>  Tue, 06 Sep 2011 06:57:11 +0200
