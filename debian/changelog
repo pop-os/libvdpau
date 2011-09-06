@@ -1,8 +1,12 @@
 libvdpau (0.4.1-3) UNRELEASED; urgency=low
 
+  [ Andres Mejia ]
   * Update to my @debian.org email.
 
- -- Andres Mejia <amejia@debian.org>  Sun, 17 Jul 2011 14:11:18 -0400
+  [ Andreas Beckmann ]
+  * Add myself to Uploaders.
+
+ -- Andreas Beckmann <debian@abeckmann.de>  Tue, 06 Sep 2011 06:57:11 +0200
 
 libvdpau (0.4.1-2) unstable; urgency=high
 

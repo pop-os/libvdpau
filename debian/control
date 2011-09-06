@@ -3,7 +3,9 @@ Section: libs
 Priority: optional
 Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
 Uploaders: Jean-Yves Avenard <jyavenard@gmail.com>,
- Andres Mejia <amejia@debian.org>, Russ Allbery <rra@debian.org>
+ Andres Mejia <amejia@debian.org>,
+ Russ Allbery <rra@debian.org>,
+ Andreas Beckmann <debian@abeckmann.de>,
 DM-Upload-Allowed: yes
 Build-Depends: debhelper (>= 7.0.50~), pkg-config, libx11-dev,
  x11proto-dri2-dev (>= 2.2), libxext-dev,
