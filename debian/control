@@ -20,8 +20,8 @@ Vcs-Browser: http://git.debian.org/?p=pkg-nvidia/libvdpau.git
 Package: libvdpau-dev
 Architecture: any
 Section: libdevel
-Depends: libvdpau1 (>= ${source:Version}),
-         libvdpau1 (<< ${source:Version}.1~),
+Depends:
+ libvdpau1 (= ${binary:Version}),
          libx11-dev,
          ${misc:Depends}
 Replaces: nvidia-libvdpau-dev
