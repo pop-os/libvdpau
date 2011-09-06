@@ -2,14 +2,20 @@ Source: libvdpau
 Section: libs
 Priority: optional
 Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
-Uploaders: Jean-Yves Avenard <jyavenard@gmail.com>,
+Uploaders:
+ Jean-Yves Avenard <jyavenard@gmail.com>,
  Andres Mejia <amejia@debian.org>,
  Russ Allbery <rra@debian.org>,
  Andreas Beckmann <debian@abeckmann.de>,
 DM-Upload-Allowed: yes
-Build-Depends: debhelper (>= 7.0.50~), pkg-config, libx11-dev,
- x11proto-dri2-dev (>= 2.2), libxext-dev,
- g++-multilib [amd64], ia32-libs-dev [amd64],
+Build-Depends:
+ debhelper (>= 7.0.50~),
+ pkg-config,
+ libx11-dev,
+ x11proto-dri2-dev (>= 2.2),
+ libxext-dev,
+ g++-multilib [amd64],
+ ia32-libs-dev [amd64],
 Build-Depends-Indep:
  doxygen-latex,
  graphviz,
@@ -23,8 +29,8 @@ Architecture: any
 Section: libdevel
 Depends:
  libvdpau1 (= ${binary:Version}),
-         libx11-dev,
-         ${misc:Depends}
+ libx11-dev,
+ ${misc:Depends}
 Replaces: nvidia-libvdpau-dev
 Conflicts: nvidia-libvdpau-dev
 Suggests: libvdpau-doc
@@ -43,14 +49,19 @@ Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Replaces: nvidia-libvdpau, nvidia-libvdpau-ia32,
+Replaces:
+ nvidia-libvdpau,
  nvidia-libvdpau1,
+ nvidia-libvdpau-ia32,
  nvidia-libvdpau1-ia32,
-Conflicts: nvidia-libvdpau, nvidia-libvdpau-ia32,
+Conflicts:
+ nvidia-libvdpau,
  nvidia-libvdpau1,
+ nvidia-libvdpau-ia32,
  nvidia-libvdpau1-ia32,
  lib32vdpau1 [i386],
-Suggests: nvidia-vdpau-driver [amd64 i386]
+Suggests:
+ nvidia-vdpau-driver [amd64 i386]
  | nvidia-vdpau-driver-ia32 [amd64]
  | vdpau-driver
 Description: Video Decode and Presentation API for Unix (libraries)
@@ -68,7 +79,9 @@ Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Replaces: nvidia-libvdpau1-ia32
 Conflicts: nvidia-libvdpau1-ia32
-Suggests: nvidia-vdpau-driver-ia32 [amd64] | vdpau-driver-ia32
+Suggests:
+ nvidia-vdpau-driver-ia32 [amd64]
+ | vdpau-driver-ia32
 Description: Video Decode and Presentation API for Unix (32-bit libraries)
  VDPAU (Video Decode and Presentation API for Unix) is an open source
  library (libvdpau) and API designed by NVIDIA originally for its GeForce
