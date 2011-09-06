@@ -10,8 +10,9 @@ DM-Upload-Allowed: yes
 Build-Depends: debhelper (>= 7.0.50~), pkg-config, libx11-dev,
  x11proto-dri2-dev (>= 2.2), libxext-dev,
  g++-multilib [amd64], ia32-libs-dev [amd64],
-Build-Depends-Indep: doxygen, graphviz, texlive-base-bin | texlive-binaries,
- texlive-base,
+Build-Depends-Indep:
+ doxygen-latex,
+ graphviz,
 Standards-Version: 3.9.2
 Homepage: http://cgit.freedesktop.org/~aplattner/libvdpau
 Vcs-Git: git://git.debian.org/git/pkg-nvidia/libvdpau.git
