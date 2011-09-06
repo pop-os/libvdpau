@@ -12,6 +12,7 @@ libvdpau (0.4.1-3) UNRELEASED; urgency=low
   * Use unversioned Conflicts/Replaces on nvidia-libvdpau* to cleanup the
     transitional packages.
   * Use binary:Version for relationship between libvdpau1 and libvdpau-dev.
+  * Switch Build-Depends to doxygen-latex.  (Closes: #616264)
   * Add myself to Uploaders.
 
  -- Andreas Beckmann <debian@abeckmann.de>  Tue, 06 Sep 2011 06:57:11 +0200
