@@ -45,7 +45,8 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Replaces: nvidia-libvdpau, nvidia-libvdpau-ia32,
  nvidia-libvdpau1 (<< 195.36.24-2), nvidia-libvdpau1-ia32 (<< 195.36.24-2)
 Conflicts: nvidia-libvdpau, nvidia-libvdpau-ia32,
- nvidia-libvdpau1 (<< 195.36.24-2), nvidia-libvdpau1-ia32 (<< 195.36.24-2)
+ nvidia-libvdpau1 (<< 195.36.24-2), nvidia-libvdpau1-ia32 (<< 195.36.24-2),
+ lib32vdpau1 [i386],
 Suggests: nvidia-vdpau-driver [amd64 i386]
  | nvidia-vdpau-driver-ia32 [amd64]
  | vdpau-driver
