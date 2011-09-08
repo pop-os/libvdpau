@@ -9,7 +9,7 @@ Uploaders:
  Andreas Beckmann <debian@abeckmann.de>,
 DM-Upload-Allowed: yes
 Build-Depends:
- debhelper (>= 7.0.50~),
+ debhelper (>= 8),
  pkg-config,
  libx11-dev,
  x11proto-dri2-dev (>= 2.2),
