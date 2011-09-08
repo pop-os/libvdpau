@@ -23,6 +23,7 @@ libvdpau (0.4.1-3) UNRELEASED; urgency=low
     autoreconf_-fi.patch.
   * Remove debian/libvdpau-get-orig-source, repackaging is no longer necessary
     with dh-autoreconf.
+  * Build with LDFLAGS="-Wl,--as-needed".
   * Add myself to Uploaders.
 
  -- Andreas Beckmann <debian@abeckmann.de>  Tue, 06 Sep 2011 06:57:11 +0200
