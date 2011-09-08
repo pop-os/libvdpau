@@ -21,6 +21,8 @@ libvdpau (0.4.1-3) UNRELEASED; urgency=low
   * Switch to debhelper 8.
   * Switch to dh-autoreconf: add to B-D, use dh --with autoreconf and drop
     autoreconf_-fi.patch.
+  * Remove debian/libvdpau-get-orig-source, repackaging is no longer necessary
+    with dh-autoreconf.
   * Add myself to Uploaders.
 
  -- Andreas Beckmann <debian@abeckmann.de>  Tue, 06 Sep 2011 06:57:11 +0200
