@@ -19,6 +19,8 @@ libvdpau (0.4.1-3) UNRELEASED; urgency=low
     commit 4262513: "vdpau_wrapper.c: Track dynamic library handles and free
     them on exit using __attribute__((destructor))".  This could fix #592204.
   * Switch to debhelper 8.
+  * Switch to dh-autoreconf: add to B-D, use dh --with autoreconf and drop
+    autoreconf_-fi.patch.
   * Add myself to Uploaders.
 
  -- Andreas Beckmann <debian@abeckmann.de>  Tue, 06 Sep 2011 06:57:11 +0200
