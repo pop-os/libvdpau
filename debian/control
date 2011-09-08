@@ -10,6 +10,7 @@ Uploaders:
 DM-Upload-Allowed: yes
 Build-Depends:
  debhelper (>= 8),
+ dh-autoreconf,
  pkg-config,
  libx11-dev,
  x11proto-dri2-dev (>= 2.2),
