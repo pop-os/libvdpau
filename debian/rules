@@ -54,6 +54,10 @@ install32:
 override_dh_installdocs:
 	dh_installdocs -X.md5
 
+# ignore the plugin
+override_dh_makeshlibs:
+	dh_makeshlibs -Xvdpau/libvdpau_trace.so.1
+
 clean:
 	dh clean
 	rm -rf debian/32
