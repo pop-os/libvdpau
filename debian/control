@@ -27,6 +27,7 @@ Vcs-Git: git://git.debian.org/git/pkg-nvidia/libvdpau.git
 Vcs-Browser: http://git.debian.org/?p=pkg-nvidia/libvdpau.git
 
 Package: libvdpau-dev
+Multi-Arch: same
 Architecture: any
 Section: libdevel
 Depends:
