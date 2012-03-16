@@ -1,8 +1,9 @@
 libvdpau (0.4.1-4) unstable; urgency=low
 
   * Allow dev package to be multiarch installable.
+  * Bump to Standards-Version 3.9.3.
 
- -- Andres Mejia <amejia@debian.org>  Fri, 16 Mar 2012 19:00:34 -0400
+ -- Andres Mejia <amejia@debian.org>  Fri, 16 Mar 2012 19:01:46 -0400
 
 libvdpau (0.4.1-3) unstable; urgency=low
 
