@@ -1,3 +1,9 @@
+libvdpau (0.4.1-5) unstable; urgency=low
+
+  * Use debhelper 9 to use hardened compiler flags.
+
+ -- Andres Mejia <amejia@debian.org>  Mon, 19 Mar 2012 10:21:23 -0400
+
 libvdpau (0.4.1-4) unstable; urgency=low
 
   * Allow dev package to be multiarch installable.
