@@ -1,4 +1,4 @@
-libvdpau (0.4.1-6) UNRELEASED; urgency=low
+libvdpau (0.4.1-6) unstable; urgency=low
 
   [ Maurizio Avogadro ]
   * Apply the wise patch supplied by Stephen Warren to fix Adobe Flash
@@ -7,7 +7,7 @@ libvdpau (0.4.1-6) UNRELEASED; urgency=low
   [ Andreas Beckmann ]
   * debian/copyright: Switch to copyright-format 1.0 and update years.
 
- -- Andreas Beckmann <debian@abeckmann.de>  Tue, 22 May 2012 18:02:37 +0200
+ -- Andreas Beckmann <debian@abeckmann.de>  Tue, 22 May 2012 23:13:00 +0200
 
 libvdpau (0.4.1-5) unstable; urgency=low
 
