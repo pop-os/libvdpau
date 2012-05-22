@@ -1,3 +1,4 @@
+Author: Stephen Warren <swarren@wwwdotorg.org>
 Description: Apply some fixes for Adobe Flash Player ugliness
  1) Swap U and V planes to VdpVideoSurfacePutBitsYCbCr to fix blue-tinged
     videos.
@@ -11,15 +12,13 @@ Description: Apply some fixes for Adobe Flash Player ugliness
  may be individually controlled via /etc/vdpau_wrapper.cfg, should they
  ever need to be disabled.
  .
- libvdpau (0.4.1-5.1) unstable; urgency=low
+ Note that this code stores the VDPAU backend function pointers as global
+ variables, which is technically incorrect. However, the likelihood of
+ any known VDPAU implementation ever returning different values for these
+ pointers within a single process is zero. If this becomes a problem, a
+ has table of VdpDevice to the stored pointers should be implemented.
  .
-   * Non-maintainer upload.
-   * apply the wise patch supplied by Stephen Warren to fix Adobe Flash
-     insanities
-Author: Maurizio Avogadro <mavoga@gmail.com>
-
----
-
+ Signed-off-by: Stephen Warren <swarren@wwwdotorg.org>
 Origin: other, http://lists.freedesktop.org/archives/vdpau/2012-May/000022.html
 Forwarded: not-needed
 Reviewed-By: Maurizio Avogadro <mavoga@gmail.com>
