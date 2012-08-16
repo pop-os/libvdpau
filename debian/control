@@ -15,8 +15,6 @@ Build-Depends:
  libx11-dev,
  x11proto-dri2-dev (>= 2.2),
  libxext-dev,
- g++-multilib [amd64],
- ia32-libs-dev [amd64],
 Build-Depends-Indep:
  doxygen-latex,
  graphviz,
@@ -57,15 +55,15 @@ Replaces:
  nvidia-libvdpau1,
  nvidia-libvdpau-ia32,
  nvidia-libvdpau1-ia32,
+ lib32vdpau1,
 Conflicts:
  nvidia-libvdpau,
  nvidia-libvdpau1,
  nvidia-libvdpau-ia32,
  nvidia-libvdpau1-ia32,
- lib32vdpau1 [i386],
+ lib32vdpau1,
 Suggests:
  nvidia-vdpau-driver [amd64 i386]
- | nvidia-vdpau-driver-ia32 [amd64]
  | vdpau-driver
 Description: Video Decode and Presentation API for Unix (libraries)
  VDPAU (Video Decode and Presentation API for Unix) is an open source
@@ -76,24 +74,6 @@ Description: Video Decode and Presentation API for Unix (libraries)
  and video post-processing to the GPU video-hardware.
  .
  This package contains the VDPAU wrapper and trace libraries.
-
-Package: lib32vdpau1
-Architecture: amd64
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Replaces: nvidia-libvdpau1-ia32
-Conflicts: nvidia-libvdpau1-ia32
-Suggests:
- nvidia-vdpau-driver-ia32 [amd64]
- | vdpau-driver-ia32
-Description: Video Decode and Presentation API for Unix (32-bit libraries)
- VDPAU (Video Decode and Presentation API for Unix) is an open source
- library (libvdpau) and API designed by NVIDIA originally for its GeForce
- 8 series and later GPU hardware, targeted at the X Window System on Unix
- operating-systems (including Linux, FreeBSD, and Solaris). This VDPAU API
- allows video programs to offload portions of the video decoding process
- and video post-processing to the GPU video-hardware.
- .
- This package contains the VDPAU wrapper and trace 32-bit libraries.
 
 Package: libvdpau-doc
 Architecture: all

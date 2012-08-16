@@ -1,3 +1,15 @@
+libvdpau (0.4.1-7) unstable; urgency=low
+
+  * The last (and only) reverse dependency of lib32vdpau1 was the non-free
+    nvidia-vdpau-driver-ia32 which is now an empty transitional package.
+  * d/{control,lib32vdpau1.*}: Drop lib32vdpau1 package.  (Closes: #679524)
+  * d/{control,rules}: Remove support for building the extra 32-bit biarch
+    library on amd64.
+  * libvdpau1: Add Replaces/Conflicts: lib32vdpau1 to ensure the old biarch
+    package gets removed properly.
+
+ -- Andreas Beckmann <debian@abeckmann.de>  Thu, 16 Aug 2012 02:05:59 +0200
+
 libvdpau (0.4.1-6) unstable; urgency=low
 
   [ Maurizio Avogadro ]
