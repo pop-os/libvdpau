@@ -1,3 +1,7 @@
+0001-Make-use-of-dri2proto_CFLAGS-when-building.patch
+0002-Change-mailing-list-to-vdpau-lists.freedesktop.org.patch
+0003-Fix-leaked-extension-info-on-library-unload.patch
+
 link-with-libx11.patch
 simplify-dlopen-path-length-error-handling.patch
 vdpau-module-searchpath.patch
