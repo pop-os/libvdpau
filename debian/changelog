@@ -3,6 +3,7 @@ libvdpau (0.4.1-8) UNRELEASED; urgency=low
   * Update my email address and remove DMUA.
   * Cherry-pick upstream commit 837c63d from 0.5+git:
     0003-Fix-leaked-extension-info-on-library-unload.patch  (Closes: #592204)
+  * libvdpau1.symbols: Add _vdp_DRI2RemoveExtension, added in above patch.
 
  -- Andreas Beckmann <anbe@debian.org>  Fri, 25 Jan 2013 20:41:10 +0100
 
