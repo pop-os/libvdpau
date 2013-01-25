@@ -8,6 +8,7 @@ libvdpau (0.5-1) UNRELEASED; urgency=low
     - 0001-Make-use-of-dri2proto_CFLAGS-when-building.patch
     - 0002-Change-mailing-list-to-vdpau-lists.freedesktop.org.patch
     - 0003-Fix-leaked-extension-info-on-library-unload.patch
+  * libvdpau1.symbols: Add _vdp_DRI2RemoveExtension, added in above patches.
 
  -- Andreas Beckmann <anbe@debian.org>  Fri, 25 Jan 2013 21:40:18 +0100
 
