@@ -1,3 +1,9 @@
+libvdpau (0.4.1-8) UNRELEASED; urgency=low
+
+  * Update my email address and remove DMUA.
+
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 25 Jan 2013 20:41:10 +0100
+
 libvdpau (0.4.1-7) unstable; urgency=low
 
   * The last (and only) reverse dependency of lib32vdpau1 was the non-free
