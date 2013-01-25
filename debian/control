@@ -6,8 +6,7 @@ Uploaders:
  Jean-Yves Avenard <jyavenard@gmail.com>,
  Andres Mejia <amejia@debian.org>,
  Russ Allbery <rra@debian.org>,
- Andreas Beckmann <debian@abeckmann.de>,
-DM-Upload-Allowed: yes
+ Andreas Beckmann <anbe@debian.org>,
 Build-Depends:
  debhelper (>= 9),
  dh-autoreconf,

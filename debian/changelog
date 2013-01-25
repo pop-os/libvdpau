@@ -3,8 +3,9 @@ libvdpau (0.5-1) UNRELEASED; urgency=low
   * New upstream release.
   * Drop patches that are now applied upstream: libvdpau_flashplayer.patch,
     track_dynamic_library_handles_and_free_them_on_exit.patch.
+  * Update my email address and remove DMUA.
 
- -- Andreas Beckmann <debian@abeckmann.de>  Wed, 12 Sep 2012 15:32:45 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 25 Jan 2013 21:40:18 +0100
 
 libvdpau (0.4.1-7) unstable; urgency=low
 
