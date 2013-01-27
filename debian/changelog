@@ -14,6 +14,16 @@ libvdpau (0.5-1) experimental; urgency=low
 
  -- Andreas Beckmann <anbe@debian.org>  Fri, 25 Jan 2013 21:59:57 +0100
 
+libvdpau (0.4.1-8) unstable; urgency=low
+
+  * Update my email address and remove DMUA.
+  * Cherry-pick upstream commit 837c63d from 0.5+git:
+    0003-Fix-leaked-extension-info-on-library-unload.patch  (Closes: #592204)
+  * libvdpau1.symbols: Add _vdp_DRI2RemoveExtension, added in above patch.
+  * Change Upstream-Contact to vdpau@lists.freedesktop.org.
+
+ -- Andreas Beckmann <anbe@debian.org>  Sun, 27 Jan 2013 01:49:23 +0100
+
 libvdpau (0.4.1-7) unstable; urgency=low
 
   * The last (and only) reverse dependency of lib32vdpau1 was the non-free
@@ -69,7 +79,7 @@ libvdpau (0.4.1-3) unstable; urgency=low
     (Closes: #616264)
   * track_dynamic_library_handles_and_free_them_on_exit.patch: Pick upstream
     commit 4262513e: "vdpau_wrapper.c: Track dynamic library handles and free
-    them on exit using __attribute__((destructor))".  This could fix #592204.
+    them on exit using __attribute__((destructor))".
   * Switch to debhelper 8.
   * Switch to dh-autoreconf: add to B-D, use dh --with autoreconf and drop
     autoreconf_-fi.patch.
