@@ -1,13 +1,13 @@
 libvdpau (0.5-1) experimental; urgency=low
 
-  * New upstream release.
+  * New upstream release.  (Closes: #689586)
   * Drop patches that are now applied upstream: libvdpau_flashplayer.patch,
     track_dynamic_library_handles_and_free_them_on_exit.patch.
   * Update my email address and remove DMUA.
   * Cherry-pick upstream commits:
     - 0001-Make-use-of-dri2proto_CFLAGS-when-building.patch
     - 0002-Change-mailing-list-to-vdpau-lists.freedesktop.org.patch
-    - 0003-Fix-leaked-extension-info-on-library-unload.patch
+    - 0003-Fix-leaked-extension-info-on-library-unload.patch (Closes: #592204)
   * libvdpau1.symbols: Add _vdp_DRI2RemoveExtension, added in above patches.
   * Change Upstream-Contact to vdpau@lists.freedesktop.org.
   * Upload to experimental.
