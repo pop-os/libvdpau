@@ -1,4 +1,4 @@
-libvdpau (0.4.1-8) UNRELEASED; urgency=low
+libvdpau (0.4.1-8) unstable; urgency=low
 
   * Update my email address and remove DMUA.
   * Cherry-pick upstream commit 837c63d from 0.5+git:
@@ -6,7 +6,7 @@ libvdpau (0.4.1-8) UNRELEASED; urgency=low
   * libvdpau1.symbols: Add _vdp_DRI2RemoveExtension, added in above patch.
   * Change Upstream-Contact to vdpau@lists.freedesktop.org.
 
- -- Andreas Beckmann <anbe@debian.org>  Fri, 25 Jan 2013 20:41:10 +0100
+ -- Andreas Beckmann <anbe@debian.org>  Sun, 27 Jan 2013 01:49:23 +0100
 
 libvdpau (0.4.1-7) unstable; urgency=low
 
