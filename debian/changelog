@@ -1,6 +1,7 @@
 libvdpau (0.6-1) UNRELEASED; urgency=low
 
   * New upstream release.
+  * Drop patches cherry-picked from upstream git: 0001, 0002, 0003.
 
  -- Andreas Beckmann <anbe@debian.org>  Tue, 12 Feb 2013 18:39:59 +0100
 
