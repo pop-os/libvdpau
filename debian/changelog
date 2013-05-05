@@ -1,11 +1,12 @@
-libvdpau (0.6-2) UNRELEASED; urgency=low
+libvdpau (0.6-2) unstable; urgency=low
 
   * Drop Conflicts/Replaces against obsolete squeeze packages.
   * libvdpau1: Drop postinst, ancient cleanup code already in squeeze.
   * Bump Standards-Version to 3.9.4. No changes needed.
   * Use canonical Vcs-* URLs.
+  * Upload to unstable.
 
- -- Andreas Beckmann <anbe@debian.org>  Mon, 06 May 2013 00:09:36 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 06 May 2013 00:42:22 +0200
 
 libvdpau (0.6-1) experimental; urgency=low
 
