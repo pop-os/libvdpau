@@ -18,7 +18,7 @@ Build-Depends-Indep:
  doxygen-latex,
  graphviz,
  ghostscript,
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 Homepage: http://cgit.freedesktop.org/~aplattner/libvdpau
 Vcs-Git: git://git.debian.org/git/pkg-nvidia/libvdpau.git
 Vcs-Browser: http://git.debian.org/?p=pkg-nvidia/libvdpau.git
