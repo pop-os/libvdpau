@@ -1,3 +1,9 @@
+libvdpau (0.6-2) UNRELEASED; urgency=low
+
+  * Drop Conflicts/Replaces against obsolete squeeze packages.
+
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 06 May 2013 00:09:36 +0200
+
 libvdpau (0.6-1) experimental; urgency=low
 
   * New upstream release.
