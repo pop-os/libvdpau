@@ -328,11 +328,10 @@ static void init_running_under_flash(void)
     }
 }
 
-void init_config(void)
+static void init_config(void)
 {
     FILE *fp;
     char buffer[1024];
-    int ret;
 
     fp = fopen(VDPAU_SYSCONFDIR "/vdpau_wrapper.cfg", "r");
     if (!fp) {
@@ -357,9 +356,11 @@ void init_config(void)
             _disable_flash_pq_bg_color = atoi(param);
         }
     }
+
+    fclose(fp);
 }
 
-void init_fixes(void)
+static void init_fixes(void)
 {
     if (_inited_fixes) {
         return;
