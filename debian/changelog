@@ -1,6 +1,7 @@
 libvdpau (0.7-1) UNRELEASED; urgency=low
 
   * New upstream release.
+  * Add README.source describing the import of a new upstream release.
 
  -- Andreas Beckmann <anbe@debian.org>  Wed, 14 Aug 2013 12:40:10 +0200
 
