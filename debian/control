@@ -4,7 +4,6 @@ Priority: optional
 Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
 Uploaders:
  Jean-Yves Avenard <jyavenard@gmail.com>,
- Andres Mejia <amejia@debian.org>,
  Russ Allbery <rra@debian.org>,
  Andreas Beckmann <anbe@debian.org>,
 Build-Depends:
