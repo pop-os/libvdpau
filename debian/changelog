@@ -1,6 +1,7 @@
-libvdpau (0.7-2.1) UNRELEASED; urgency=medium
+libvdpau (0.8-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Add myself to Uploaders.
 
  -- Vincent Cheng <vcheng@debian.org>  Sun, 20 Jul 2014 18:11:08 -0700
 
