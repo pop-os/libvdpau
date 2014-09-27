@@ -6,6 +6,7 @@ libvdpau (0.8-1) UNRELEASED; urgency=medium
   * Add myself to Uploaders.
 
   [ Andreas Beckmann ]
+  * Refresh vdpau driver searchpath patches.
   * Cherry-pick upstream commits:
     - [9d27eb0] 0001-trace-properly-annotate-private-functions-as-static.patch
     - [6cb973e] 0002-vdpau-do-not-export-_vdp_DRI2-functions.patch
