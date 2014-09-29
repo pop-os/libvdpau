@@ -36,7 +36,7 @@ override_dh_auto_install:
 	dh_auto_install
 
 override_dh_installdocs:
-	dh_installdocs -X.md5
+	dh_installdocs -X.md5 -X.map
 
 # ignore the plugin
 override_dh_makeshlibs:
