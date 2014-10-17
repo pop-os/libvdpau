@@ -1,9 +1,9 @@
-libvdpau (0.8-2) UNRELEASED; urgency=medium
+libvdpau (0.8-2) unstable; urgency=medium
 
   * Bump Standards-Version to 3.9.6. No changes needed.
   * hardening.patch: Build the tests with hardening enabled, too.
 
- -- Andreas Beckmann <anbe@debian.org>  Fri, 17 Oct 2014 22:04:59 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 17 Oct 2014 22:13:27 +0200
 
 libvdpau (0.8-1) unstable; urgency=medium
 
