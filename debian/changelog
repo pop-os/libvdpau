@@ -1,10 +1,10 @@
-libvdpau (0.8-3) UNRELEASED; urgency=medium
+libvdpau (0.8-3) unstable; urgency=medium
 
   * Add a bug-script to collect some driver information.
   * libvdpau-dev.README.Debian: Document required Depends/Enhances/Provides
     for packages containing VDPAU drivers.
 
- -- Andreas Beckmann <anbe@debian.org>  Sun, 19 Oct 2014 21:33:02 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Sun, 19 Oct 2014 22:15:30 +0200
 
 libvdpau (0.8-2) unstable; urgency=medium
 
@@ -43,7 +43,7 @@ libvdpau (0.7-2) unstable; urgency=medium
 
 libvdpau (0.7-1) unstable; urgency=low
 
-  * New upstream release.
+  * New upstream release.  (LP: #1313614)
   * Add README.source describing the import of a new upstream release.
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 15 Aug 2013 00:59:45 +0200
