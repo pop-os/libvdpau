@@ -27,6 +27,7 @@
 
 #include <dlfcn.h>
 #include <limits.h>
+#include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -99,6 +100,8 @@ static char * _vdp_get_driver_name_from_dri2(
 
     XFree(device_name);
     _vdp_DRI2RemoveExtension(display);
+#else
+    (void) display; (void) screen;
 #endif /* DRI2 */
     return driver_name;
 }
@@ -236,7 +239,6 @@ static void _vdp_close_driver(void)
 static VdpGetProcAddress * _imp_get_proc_address;
 static VdpVideoSurfacePutBitsYCbCr * _imp_vid_put_bits_y_cb_cr;
 static VdpPresentationQueueSetBackgroundColor * _imp_pq_set_bg_color;
-static int _inited_fixes;
 static int _running_under_flash;
 static int _enable_flash_uv_swap = 1;
 static int _disable_flash_pq_bg_color = 1;
@@ -278,6 +280,7 @@ static VdpStatus pq_set_bg_color_noop(
     VdpColor * const     background_color
 )
 {
+    (void) presentation_queue; (void) background_color;
     return VDP_STATUS_OK;
 }
 
@@ -382,11 +385,6 @@ static void init_config(void)
 
 static void init_fixes(void)
 {
-    if (_inited_fixes) {
-        return;
-    }
-    _inited_fixes = 1;
-
     init_running_under_flash();
     init_config();
 }
@@ -399,29 +397,51 @@ VdpStatus vdp_device_create_x11(
     VdpGetProcAddress * * get_proc_address
 )
 {
-    VdpStatus status;
+    static pthread_once_t once = PTHREAD_ONCE_INIT;
+    static pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+    VdpGetProcAddress *gpa;
+    VdpStatus status = VDP_STATUS_OK;
 
-    init_fixes();
+    pthread_once(&once, init_fixes);
 
+    pthread_mutex_lock(&lock);
     if (!_vdp_imp_device_create_x11_proc) {
         status = _vdp_open_driver(display, screen);
-        if (status != VDP_STATUS_OK) {
+        if (status != VDP_STATUS_OK)
             _vdp_close_driver();
-            return status;
-        }
     }
+    pthread_mutex_unlock(&lock);
 
-    status = _vdp_imp_device_create_x11_proc(
-        display,
-        screen,
-        device,
-        &_imp_get_proc_address
-    );
+    if (status != VDP_STATUS_OK)
+        return status;
+
+    status = _vdp_imp_device_create_x11_proc(display, screen, device, &gpa);
     if (status != VDP_STATUS_OK) {
         return status;
     }
 
     *get_proc_address = vdp_wrapper_get_proc_address;
 
-    return VDP_STATUS_OK;
+    pthread_mutex_lock(&lock);
+    if (_imp_get_proc_address != gpa) {
+        if (_imp_get_proc_address == NULL)
+            _imp_get_proc_address = gpa;
+        else
+        /* Currently the wrapper can only deal with one back-end.
+         * This should never happen, but better safe than sorry. */
+            status = VDP_STATUS_NO_IMPLEMENTATION;
+    }
+    pthread_mutex_unlock(&lock);
+
+    if (status != VDP_STATUS_OK) {
+        void *pv;
+
+        if (gpa(*device, VDP_FUNC_ID_DEVICE_DESTROY, &pv) == VDP_STATUS_OK) {
+            VdpDeviceDestroy *device_destroy = pv;
+
+            device_destroy(*device);
+        }
+    }
+
+    return status;
 }

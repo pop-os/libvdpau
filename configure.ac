@@ -1,6 +1,6 @@
 AC_PREREQ(2.60)
 
-AC_INIT(libvdpau, 0.8, [vdpau@lists.freedesktop.org], libvdpau)
+AC_INIT(libvdpau, 0.9, [vdpau@lists.freedesktop.org], libvdpau)
 AM_INIT_AUTOMAKE([dist-bzip2 foreign])
 AM_MAINTAINER_MODE
 
@@ -42,6 +42,14 @@ dnl has it in libc), or if libdl is needed to get it.
 AC_CHECK_FUNC([dlopen], [],
         AC_CHECK_LIB([dl], [dlopen], DLOPEN_LIBS="-ldl"))
 AC_SUBST([DLOPEN_LIBS])
+
+# Look for POSIX threads
+AC_SEARCH_LIBS([pthread_once], [pthread pthreads c_r], [
+    AS_IF([test "$ac_cv_search_pthread_once" != "none required"], [
+        PTHREAD_LIBS="$ac_cv_search_pthread_once"
+    ])
+])
+AC_SUBST([PTHREAD_LIBS])
 
 # Check for Doxygen.
 AC_ARG_ENABLE(documentation, AS_HELP_STRING([--disable-documentation], [Disable Doxygen documentation (default: auto)]), [DOCS=$enableval], [DOCS=auto])
