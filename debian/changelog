@@ -1,6 +1,7 @@
 libvdpau (0.9-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Drop patches cherry-picked from upstream git.
 
  -- Andreas Beckmann <anbe@debian.org>  Sun, 11 Jan 2015 21:28:07 +0100
 
