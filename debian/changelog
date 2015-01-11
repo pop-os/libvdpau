@@ -2,6 +2,8 @@ libvdpau (0.9-1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * Drop patches cherry-picked from upstream git.
+  * hardening.patch: Remove, fixed upstream.
+  * link-with-libx11.patch: Refresh.
 
  -- Andreas Beckmann <anbe@debian.org>  Sun, 11 Jan 2015 21:28:07 +0100
 
