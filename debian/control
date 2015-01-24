@@ -3,7 +3,6 @@ Section: libs
 Priority: optional
 Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
 Uploaders:
- Jean-Yves Avenard <jyavenard@gmail.com>,
  Russ Allbery <rra@debian.org>,
  Andreas Beckmann <anbe@debian.org>,
  Vincent Cheng <vcheng@debian.org>
