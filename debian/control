@@ -20,7 +20,7 @@ Build-Depends-Indep:
 Standards-Version: 3.9.6
 Homepage: http://cgit.freedesktop.org/~aplattner/libvdpau
 Vcs-Git: git://anonscm.debian.org/pkg-nvidia/libvdpau.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-nvidia/libvdpau.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-nvidia/libvdpau.git
 
 Package: libvdpau-dev
 Multi-Arch: same
