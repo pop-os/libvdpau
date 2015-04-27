@@ -2485,15 +2485,15 @@ typedef uint32_t VdpDecoderProfile;
 #define VDP_DECODER_PROFILE_H264_HIGH_444_PREDICTIVE    ((VdpDecoderProfile)26)
 /** \hideinitializer */
 /** \brief MPEG-H Part 2 == H.265 == HEVC */
-#define VDP_DECODER_PROFILE_HEVC_MAIN                   ((VdpDecoderProfile)50)
+#define VDP_DECODER_PROFILE_HEVC_MAIN                   ((VdpDecoderProfile)100)
 /** \hideinitializer */
-#define VDP_DECODER_PROFILE_HEVC_MAIN_10                ((VdpDecoderProfile)51)
+#define VDP_DECODER_PROFILE_HEVC_MAIN_10                ((VdpDecoderProfile)101)
 /** \hideinitializer */
-#define VDP_DECODER_PROFILE_HEVC_MAIN_STILL             ((VdpDecoderProfile)52)
+#define VDP_DECODER_PROFILE_HEVC_MAIN_STILL             ((VdpDecoderProfile)102)
 /** \hideinitializer */
-#define VDP_DECODER_PROFILE_HEVC_MAIN_12                ((VdpDecoderProfile)53)
+#define VDP_DECODER_PROFILE_HEVC_MAIN_12                ((VdpDecoderProfile)103)
 /** \hideinitializer */
-#define VDP_DECODER_PROFILE_HEVC_MAIN_444               ((VdpDecoderProfile)54)
+#define VDP_DECODER_PROFILE_HEVC_MAIN_444               ((VdpDecoderProfile)104)
 
 /** \hideinitializer */
 #define VDP_DECODER_LEVEL_MPEG1_NA 0
@@ -3201,13 +3201,13 @@ typedef struct {
     /** Only valid if tiles_enabled_flag is set. Ignored otherwise. */
     uint8_t uniform_spacing_flag;
     /** Only need to set 0..num_tile_columns_minus1. The struct
-        definition reserves up to the maximum of 22. Invalid values are
-        ignored. */
-    uint16_t column_width_minus1[22];
-    /** Only need to set 0..num_tile_rows_minus1. The struct
         definition reserves up to the maximum of 20. Invalid values are
+        ignored. */
+    uint16_t column_width_minus1[20];
+    /** Only need to set 0..num_tile_rows_minus1. The struct
+        definition reserves up to the maximum of 22. Invalid values are
         ignored.*/
-    uint16_t row_height_minus1[20];
+    uint16_t row_height_minus1[22];
     /** Only needed if tiles_enabled_flag is set. Invalid values are
         ignored. */
     uint8_t loop_filter_across_tiles_enabled_flag;
