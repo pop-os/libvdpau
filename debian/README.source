@@ -9,7 +9,7 @@ The tarball contains all the autotools generated files that we don't need
 in the master branch thanks to dh_autoreconf.
 
   VER=0.7
-  git-import-orig --upstream-vcs-tag libvdpau-$VER libvdpau-$VER.tar.gz
+  git-import-orig --upstream-vcs-tag libvdpau-$VER libvdpau-$VER.tar.bz2
 
 Merge the new upstream release:
 
