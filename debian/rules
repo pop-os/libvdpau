@@ -7,9 +7,8 @@ DEB_HOST_MULTIARCH  ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 # Used to enable documentation if dependencies are available
 define cond_enable
-	$(shell if test -x /usr/bin/doxygen && test -x /usr/bin/dot \
-		&& test -x /usr/bin/pdftex; then echo --enable-documentation; \
-		else echo --disable-documentation; fi )
+	$(shell if test -x /usr/bin/doxygen && test -x /usr/bin/dot; \
+		then echo --enable-documentation; else echo --disable-documentation; fi )
 endef
 
 CONFIGURE_OPTIONS ?= $(call cond_enable) \
