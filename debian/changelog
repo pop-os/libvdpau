@@ -1,3 +1,19 @@
+libvdpau (1.1.1-1) UNRELEASED; urgency=medium
+
+  [ Andreas Beckmann ]
+  * simplify d/rules
+
+  [ Luca Boccassi ]
+  * New upstream release.
+    - Use secure_getenv(3) to improve security
+      (CVE-2015-5198, CVE-2015-5199, CVE-2015-5200). Closes: #797895.
+  * Do not check for pdftex, removed upstream
+  * Add myself to Uploaders
+  * Refresh dlopen-path patch, upstream changes
+  * Refresh patch module-searchpath, upstream changes
+
+ -- Luca Boccassi <luca.boccassi@gmail.com>  Thu, 03 Sep 2015 23:31:59 +0100
+
 libvdpau (1.1-1) unstable; urgency=medium
 
   * New upstream release.
