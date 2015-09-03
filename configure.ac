@@ -1,10 +1,13 @@
 AC_PREREQ(2.60)
 
-AC_INIT(libvdpau, 1.1, [vdpau@lists.freedesktop.org], libvdpau)
+AC_INIT(libvdpau, 1.1.1, [vdpau@lists.freedesktop.org], libvdpau)
 AM_INIT_AUTOMAKE([dist-bzip2 foreign])
-AM_MAINTAINER_MODE
 
 AC_CONFIG_HEADERS(config.h)
+
+# Check for secure_getenv
+AC_USE_SYSTEM_EXTENSIONS
+AC_CHECK_FUNCS([__secure_getenv secure_getenv])
 
 # Disable static libraries by default.  Use --enable-static if you really want
 # them.
@@ -56,11 +59,9 @@ AC_ARG_ENABLE(documentation, AS_HELP_STRING([--disable-documentation], [Disable 
 if test "x$DOCS" != xno; then
     AC_CHECK_TOOL([DOXYGEN], [doxygen], [no])
     AC_CHECK_TOOL([DOT], [dot], [no])
-    AC_CHECK_TOOL([PDFTEX], [pdftex], [no])
 else
     DOXYGEN=no
     DOT=no
-    PDFTEX=no
 fi
 if test "x$DOCS" = xyes; then
     if test "x$DOXYGEN" = xno; then
@@ -69,11 +70,8 @@ if test "x$DOCS" = xyes; then
     if test "x$DOT" = xno; then
         AC_ERROR([Documentation enabled but dot was not found in your path.  Please install graphviz])
     fi
-    if test "x$PDFTEX" = xno; then
-        AC_ERROR([Documentation enabled but pdftex was not found in your path])
-    fi
 fi
-AM_CONDITIONAL([ENABLE_DOCS], [test "x$DOXYGEN" != xno -a "x$DOT" != xno -a "x$PDFTEX" != xno])
+AM_CONDITIONAL([ENABLE_DOCS], [test "x$DOXYGEN" != xno -a "x$DOT" != xno])
 AC_SUBST(DOXYGEN)
 
 # Options
