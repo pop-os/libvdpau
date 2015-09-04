@@ -1,4 +1,4 @@
-libvdpau (1.1.1-1) UNRELEASED; urgency=medium
+libvdpau (1.1.1-1) unstable; urgency=medium
 
   [ Andreas Beckmann ]
   * simplify d/rules
