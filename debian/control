@@ -20,7 +20,7 @@ Build-Depends-Indep:
  ghostscript,
 Standards-Version: 3.9.8
 Homepage: http://cgit.freedesktop.org/~aplattner/libvdpau
-Vcs-Git: git://anonscm.debian.org/pkg-nvidia/libvdpau.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-nvidia/libvdpau.git
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-nvidia/libvdpau.git
 
 Package: libvdpau-dev
