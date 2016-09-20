@@ -88,6 +88,7 @@ Depends:
 Suggests:
  nvidia-vdpau-driver [amd64 i386],
  nvidia-legacy-340xx-vdpau-driver [amd64 i386],
+ nvidia-legacy-304xx-vdpau-driver [amd64 i386],
 Description: Video Decode and Presentation API for Unix (driver metapackage)
  VDPAU (Video Decode and Presentation API for Unix) is an open source
  library (libvdpau) and API designed by NVIDIA originally for its GeForce
