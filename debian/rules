@@ -33,6 +33,3 @@ override_dh_bugfiles:
 # ignore the plugin
 override_dh_makeshlibs:
 	dh_makeshlibs -Xvdpau/libvdpau_trace.so.1
-
-override_dh_strip:
-	dh_strip --dbg-package=libvdpau1-dbg
