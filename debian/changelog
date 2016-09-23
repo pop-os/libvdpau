@@ -1,4 +1,4 @@
-libvdpau (1.1.1-4) UNRELEASED; urgency=medium
+libvdpau (1.1.1-4) unstable; urgency=medium
 
   [ Helmut Grohne ]
   * Fix FTCBFS: Let dh_auto_configure pass --host.  (Closes: #838395)
@@ -9,7 +9,7 @@ libvdpau (1.1.1-4) UNRELEASED; urgency=medium
   * Update Vcs-Git URL.
   * Suggest more non-free driver packages.
 
- -- Andreas Beckmann <anbe@debian.org>  Tue, 20 Sep 2016 22:10:07 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 23 Sep 2016 09:05:28 +0200
 
 libvdpau (1.1.1-3) unstable; urgency=medium
 
