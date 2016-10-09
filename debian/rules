@@ -2,6 +2,9 @@
 
 #export DH_VERBOSE=1
 
+# see FEATURE AREAS in dpkg-buildflags(1)
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
 # Used to enable documentation if dependencies are available
 define cond_enable
 	$(shell if test -x /usr/bin/doxygen && test -x /usr/bin/dot; \

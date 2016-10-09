@@ -1,3 +1,9 @@
+libvdpau (1.1.1-5) UNRELEASED; urgency=medium
+
+  * Enable more hardening.
+
+ -- Andreas Beckmann <anbe@debian.org>  Sun, 09 Oct 2016 14:54:52 +0200
+
 libvdpau (1.1.1-4) unstable; urgency=medium
 
   [ Helmut Grohne ]
