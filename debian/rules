@@ -5,6 +5,12 @@
 # see FEATURE AREAS in dpkg-buildflags(1)
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
+# see ENVIRONMENT in dpkg-buildflags(1)
+# package maintainers to append CFLAGS
+#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+# package maintainers to append LDFLAGS
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
 # Used to enable documentation if dependencies are available
 define cond_enable
 	$(shell if test -x /usr/bin/doxygen && test -x /usr/bin/dot; \
@@ -23,8 +29,7 @@ override_dh_autoreconf:
 	dh_autoreconf --as-needed
 
 override_dh_auto_configure:
-	LDFLAGS="-Wl,--as-needed $$(dpkg-buildflags --get LDFLAGS)" \
-		dh_auto_configure -- $(CONFIGURE_OPTIONS)
+	dh_auto_configure -- $(CONFIGURE_OPTIONS)
 
 override_dh_installdocs:
 	dh_installdocs -X.md5
