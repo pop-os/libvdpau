@@ -21,7 +21,7 @@ CONFIGURE_OPTIONS ?= $(call cond_enable) \
 		     --enable-dri2
 
 %:
-	dh $@ --with autoreconf
+	dh $@
 
 binary: binary-indep binary-arch ;
 
