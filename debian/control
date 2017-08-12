@@ -15,9 +15,9 @@ Build-Depends:
  x11proto-dri2-dev (>= 2.2),
  libxext-dev,
 Build-Depends-Indep:
- doxygen-latex,
- graphviz,
- ghostscript,
+ doxygen-latex <!nodoc>,
+ graphviz <!nodoc>,
+ ghostscript <!nodoc>,
 Standards-Version: 3.9.8
 Homepage: https://cgit.freedesktop.org/~aplattner/libvdpau
 Vcs-Git: https://anonscm.debian.org/git/pkg-nvidia/libvdpau.git
@@ -66,6 +66,7 @@ Description: Video Decode and Presentation API for Unix (libraries)
 Package: libvdpau-doc
 Architecture: all
 Section: doc
+Build-Profiles: <!nodoc>
 Depends: ${misc:Depends}
 Description: Video Decode and Presentation API for Unix (documentation)
  VDPAU (Video Decode and Presentation API for Unix) is an open source

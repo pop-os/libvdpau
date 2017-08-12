@@ -11,13 +11,15 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 # package maintainers to append LDFLAGS
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
-# Used to enable documentation if dependencies are available
-define cond_enable
-	$(shell if test -x /usr/bin/doxygen && test -x /usr/bin/dot; \
-		then echo --enable-documentation; else echo --disable-documentation; fi )
-endef
+DOCS_CONF=--enable-documentation
+ifneq (,$(findstring nodoc,$(DEB_BUILD_OPTIONS)))
+DOCS_CONF=--disable-documentation
+endif
+ifneq (,$(findstring nodoc,$(DEB_BUILD_PROFILES)))
+DOCS_CONF=--disable-documentation
+endif
 
-CONFIGURE_OPTIONS ?= $(call cond_enable) \
+CONFIGURE_OPTIONS ?= $(DOCS_CONF) \
 		     --enable-dri2
 
 %:
