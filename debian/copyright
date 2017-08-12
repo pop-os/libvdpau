@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: VDPAU wrapper and trace libraries
 Upstream-Contact: <vdpau@lists.freedesktop.org>
-Source: http://people.freedesktop.org/~aplattner/vdpau/
+Source: https://people.freedesktop.org/~aplattner/vdpau/
 
 Files: *
 Copyright: © 2008-2010 NVIDIA Corporation
