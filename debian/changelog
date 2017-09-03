@@ -1,4 +1,4 @@
-libvdpau (1.1.1-7) UNRELEASED; urgency=medium
+libvdpau (1.1.1-7) unstable; urgency=medium
 
   [ Luca Boccassi ]
   * Use HTTPS for upstream URLs in d/copyright, d/watch and d/control.
@@ -11,7 +11,7 @@ libvdpau (1.1.1-7) UNRELEASED; urgency=medium
   [ Luca Boccassi ]
   * Switch to my Debian email address.
 
- -- Luca Boccassi <luca.boccassi@gmail.com>  Sat, 12 Aug 2017 14:58:04 +0100
+ -- Luca Boccassi <bluca@debian.org>  Sun, 03 Sep 2017 18:11:59 +0100
 
 libvdpau (1.1.1-6) unstable; urgency=medium
 
