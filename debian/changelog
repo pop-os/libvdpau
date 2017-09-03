@@ -8,6 +8,9 @@ libvdpau (1.1.1-7) UNRELEASED; urgency=medium
   [ Russ Allbery ]
   * Remove myself from Uploaders.
 
+  [ Luca Boccassi ]
+  * Switch to my Debian email address.
+
  -- Luca Boccassi <luca.boccassi@gmail.com>  Sat, 12 Aug 2017 14:58:04 +0100
 
 libvdpau (1.1.1-6) unstable; urgency=medium

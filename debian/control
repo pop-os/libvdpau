@@ -5,7 +5,7 @@ Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
 Uploaders:
  Andreas Beckmann <anbe@debian.org>,
  Vincent Cheng <vcheng@debian.org>,
- Luca Boccassi <luca.boccassi@gmail.com>
+ Luca Boccassi <bluca@debian.org>
 Build-Depends:
  debhelper (>= 10),
  dh-autoreconf,
