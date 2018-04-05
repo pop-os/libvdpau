@@ -4,6 +4,7 @@ libvdpau (1.1.1-9) UNRELEASED; urgency=medium
   * Set Rules-Requires-Root: no.
   * Switch Vcs-* URLs to salsa.debian.org.
   * Bump Standards-Version to 4.1.4. No changes needed.
+  * Add debian/upstream/metadata.
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 05 Apr 2018 21:41:51 +0200
 
