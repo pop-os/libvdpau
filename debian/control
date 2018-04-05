@@ -16,6 +16,7 @@ Build-Depends-Indep:
  doxygen-latex <!nodoc>,
  graphviz <!nodoc>,
  ghostscript <!nodoc>,
+Rules-Requires-Root: no
 Standards-Version: 4.1.0
 Homepage: https://cgit.freedesktop.org/~aplattner/libvdpau
 Vcs-Git: https://anonscm.debian.org/git/pkg-nvidia/libvdpau.git
