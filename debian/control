@@ -7,8 +7,7 @@ Uploaders:
  Vincent Cheng <vcheng@debian.org>,
  Luca Boccassi <bluca@debian.org>
 Build-Depends:
- debhelper (>= 10),
- dh-autoreconf,
+ debhelper (>= 11~),
  pkg-config,
  libx11-dev,
  x11proto-dri2-dev (>= 2.2),
