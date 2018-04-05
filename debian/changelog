@@ -5,6 +5,7 @@ libvdpau (1.1.1-9) UNRELEASED; urgency=medium
   * Switch Vcs-* URLs to salsa.debian.org.
   * Bump Standards-Version to 4.1.4. No changes needed.
   * Add debian/upstream/metadata.
+  * Mark libvdpau-doc as Multi-Arch: foreign.
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 05 Apr 2018 21:41:51 +0200
 

@@ -64,6 +64,7 @@ Description: Video Decode and Presentation API for Unix (libraries)
 
 Package: libvdpau-doc
 Architecture: all
+Multi-Arch: foreign
 Section: doc
 Build-Profiles: <!nodoc>
 Depends: ${misc:Depends}
