@@ -3,7 +3,7 @@ libvdpau (1.1.1-9) UNRELEASED; urgency=medium
   * Switch to debhelper-compat (= 11).
   * Set Rules-Requires-Root: no.
   * Switch Vcs-* URLs to salsa.debian.org.
-  * Bump Standards-Version to 4.1.4. No changes needed.
+  * Bump Standards-Version to 4.2.1. No changes needed.
   * Add debian/upstream/metadata.
   * Mark libvdpau-doc as Multi-Arch: foreign.
   * libvdpau1.symbols: add Build-Depends-Package field.
