@@ -1,4 +1,4 @@
-libvdpau (1.1.1-9) UNRELEASED; urgency=medium
+libvdpau (1.1.1-9) unstable; urgency=medium
 
   * Switch to debhelper-compat (= 11).
   * Set Rules-Requires-Root: no.
@@ -8,7 +8,7 @@ libvdpau (1.1.1-9) UNRELEASED; urgency=medium
   * Mark libvdpau-doc as Multi-Arch: foreign.
   * libvdpau1.symbols: add Build-Depends-Package field.
 
- -- Andreas Beckmann <anbe@debian.org>  Thu, 05 Apr 2018 21:41:51 +0200
+ -- Andreas Beckmann <anbe@debian.org>  Wed, 12 Dec 2018 01:40:52 +0100
 
 libvdpau (1.1.1-8) unstable; urgency=medium
 
