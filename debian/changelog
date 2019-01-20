@@ -1,3 +1,9 @@
+libvdpau (1.1.1-10) UNRELEASED; urgency=medium
+
+  * Switch to debhelper-compat (= 12).
+
+ -- Andreas Beckmann <anbe@debian.org>  Sun, 20 Jan 2019 19:26:38 +0100
+
 libvdpau (1.1.1-9) unstable; urgency=medium
 
   * Switch to debhelper-compat (= 11).
