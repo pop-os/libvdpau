@@ -10,7 +10,7 @@ Build-Depends:
  debhelper-compat (= 12),
  pkg-config,
  libx11-dev,
- x11proto-dri2-dev (>= 2.2),
+ x11proto-dri2-dev,
  libxext-dev,
 Build-Depends-Indep:
  doxygen-latex <!nodoc>,
@@ -46,10 +46,6 @@ Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Replaces:
- lib32vdpau1,
-Conflicts:
- lib32vdpau1,
 Recommends:
  vdpau-driver-all | vdpau-driver,
 Description: Video Decode and Presentation API for Unix (libraries)

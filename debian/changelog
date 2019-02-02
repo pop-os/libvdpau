@@ -1,9 +1,13 @@
 libvdpau (1.2-1~git1) UNRELEASED; urgency=medium
 
+  [ Luca Boccassi ]
   * gbp.conf: switch upstream tag to upstream's format.
   * Merge tag 'libvdpau-1.2'.
   * Drop missing-configh-include.patch, merged upstream.
   * Update upstream metadata, repository is now on gitlab.
+
+  [ Andreas Beckmann ]
+  * Drop versioned constraints that are satisfied in wheezy.
 
  -- Luca Boccassi <bluca@debian.org>  Sun, 24 Mar 2019 12:51:53 +0000
 
