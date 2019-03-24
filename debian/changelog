@@ -1,3 +1,12 @@
+libvdpau (1.2-1~git1) UNRELEASED; urgency=medium
+
+  * gbp.conf: switch upstream tag to upstream's format.
+  * Merge tag 'libvdpau-1.2'.
+  * Drop missing-configh-include.patch, merged upstream.
+  * Update upstream metadata, repository is now on gitlab.
+
+ -- Luca Boccassi <bluca@debian.org>  Sun, 24 Mar 2019 12:51:53 +0000
+
 libvdpau (1.1.1-10) unstable; urgency=medium
 
   * Switch to debhelper-compat (= 12).
