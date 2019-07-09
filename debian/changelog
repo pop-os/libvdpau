@@ -1,4 +1,4 @@
-libvdpau (1.2-1~git1) UNRELEASED; urgency=medium
+libvdpau (1.2-1) unstable; urgency=medium
 
   [ Luca Boccassi ]
   * gbp.conf: switch upstream tag to upstream's format.
@@ -10,7 +10,7 @@ libvdpau (1.2-1~git1) UNRELEASED; urgency=medium
   * Drop versioned constraints that are satisfied in wheezy.
   * Bump Standards-Version to 4.4.0. No changes needed.
 
- -- Luca Boccassi <bluca@debian.org>  Sun, 24 Mar 2019 12:51:53 +0000
+ -- Andreas Beckmann <anbe@debian.org>  Tue, 09 Jul 2019 18:43:58 +0200
 
 libvdpau (1.1.1-10) unstable; urgency=medium
 
