@@ -1,12 +1,16 @@
-libvdpau (1.2-2) UNRELEASED; urgency=medium
+libvdpau (1.3-1) UNRELEASED; urgency=medium
 
+  * New upstream release.
   * Update Homepage and watch file for upstream move to gitlab.
+  * Do not ship tex logs in libvdpau-doc. Makes the build unreproducible, and
+    they are not useful. Thanks Chris Lamb for the heads-up and fix!
+    (Closes: #939650)
   * Drop vdpau-module-searchpath.patch: The migration to multiarch paths was
     finished long ago and backwards compatibility is no longer needed.
   * Drop simplify-dlopen-path-length-error-handling.patch: Not needed without
     vdpau-module-searchpath.patch.  (Closes: #946063)
 
- -- Andreas Beckmann <anbe@debian.org>  Tue, 03 Dec 2019 18:40:17 +0100
+ -- Andreas Beckmann <anbe@debian.org>  Tue, 03 Dec 2019 21:12:18 +0100
 
 libvdpau (1.2-1) unstable; urgency=medium
 
