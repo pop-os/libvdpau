@@ -1,0 +1,31 @@
+From f1fa72e9be216bbe7e7af3c11e9f2aed5524dce2 Mon Sep 17 00:00:00 2001
+From: Timo Gurr <timo.gurr@gmail.com>
+Date: Wed, 4 Sep 2019 19:51:50 +0000
+Subject: [PATCH 3/3] meson: respect prefix for includedir
+
+---
+ include/meson.build       | 2 +-
+ include/vdpau/meson.build | 4 ++++
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+ create mode 100644 include/vdpau/meson.build
+
+diff --git a/include/meson.build b/include/meson.build
+index 40c5c75..6b2af9c 100644
+--- a/include/meson.build
++++ b/include/meson.build
+@@ -1 +1 @@
+-install_subdir('vdpau', install_dir : 'include')
++subdir('vdpau')
+diff --git a/include/vdpau/meson.build b/include/vdpau/meson.build
+new file mode 100644
+index 0000000..4b600d6
+--- /dev/null
++++ b/include/vdpau/meson.build
+@@ -0,0 +1,4 @@
++# install headers
++install_headers('vdpau.h',
++                'vdpau_x11.h',
++                subdir : 'vdpau')
+-- 
+2.11.0
+
