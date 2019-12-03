@@ -15,26 +15,23 @@ export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 # arch-dependent builds, as they are Build-Depends-Indep
 define DOCS_CONF
        $(shell if test -x /usr/bin/doxygen && test -x /usr/bin/dot; \
-               then echo --enable-documentation; else echo --disable-documentation; fi )
+               then echo -Ddocumentation=true; else echo -Ddocumentation=false; fi )
 endef
 
 ifneq (,$(findstring nodoc,$(DEB_BUILD_OPTIONS)))
-DOCS_CONF=--disable-documentation
+DOCS_CONF=-Ddocumentation=false
 endif
 ifneq (,$(findstring nodoc,$(DEB_BUILD_PROFILES)))
-DOCS_CONF=--disable-documentation
+DOCS_CONF=-Ddocumentation=false
 endif
 
 CONFIGURE_OPTIONS ?= $(DOCS_CONF) \
-		     --enable-dri2
+		     -Ddri2=true
 
 %:
 	dh $@
 
 binary: binary-indep binary-arch ;
-
-override_dh_autoreconf:
-	dh_autoreconf --as-needed
 
 override_dh_auto_configure:
 	dh_auto_configure -- $(CONFIGURE_OPTIONS)
