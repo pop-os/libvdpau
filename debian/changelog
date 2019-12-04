@@ -12,6 +12,7 @@ libvdpau (1.3-1) UNRELEASED; urgency=medium
     finished long ago and backwards compatibility is no longer needed.
   * Drop simplify-dlopen-path-length-error-handling.patch: Not needed without
     vdpau-module-searchpath.patch.  (Closes: #946063)
+  * Bump Standards-Version to 4.4.1. No changes needed.
 
  -- Andreas Beckmann <anbe@debian.org>  Tue, 03 Dec 2019 21:12:18 +0100
 
