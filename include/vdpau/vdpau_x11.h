@@ -167,8 +167,8 @@ typedef VdpStatus VdpPresentationQueueTargetCreateX11(
 /** \hideinitializer */
 #define VDP_FUNC_ID_PRESENTATION_QUEUE_TARGET_CREATE_X11 (VdpFuncId)(VDP_FUNC_ID_BASE_WINSYS + 0)
 
-/*@}*/
-/*@}*/
+/** @} */
+/** @} */
 
 #ifdef __cplusplus
 }

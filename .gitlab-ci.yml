@@ -7,7 +7,7 @@ stages:
 build:
   stage: build
   script:
-      - pacman --noconfirm -Sy gcc meson ninja pkg-config doxygen graphviz texlive-bin
+      - pacman --noconfirm -Sy gcc meson ninja pkg-config doxygen graphviz texlive-bin xorgproto
       - ./test/gitlab-ci.sh
   artifacts:
     paths:
