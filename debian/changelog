@@ -2,6 +2,7 @@ libvdpau (1.4-1) UNRELEASED; urgency=medium
 
   * New upstream release.
   * The bullseye toolchain defaults to linking with --as-needed.
+  * Bump Standards-Version to 4.5.0. No changes needed.
 
  -- Andreas Beckmann <anbe@debian.org>  Fri, 17 Apr 2020 17:05:26 +0200
 
