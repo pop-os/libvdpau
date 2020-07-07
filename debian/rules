@@ -2,12 +2,21 @@
 
 #export DH_VERBOSE=1
 
+driver_depends_Debian	+= libvdpau-va-gl1 [linux-any],
+driver_depends		+= mesa-vdpau-drivers [linux-any kfreebsd-any],
+
+driver_suggests_Debian	+= nvidia-vdpau-driver [amd64 i386 arm64],
+driver_suggests_Debian	+= nvidia-tesla-440-vdpau-driver [amd64 i386 ppc64el],
+driver_suggests_Debian	+= nvidia-tesla-418-vdpau-driver [amd64 i386 ppc64el],
+driver_suggests_Debian	+= nvidia-legacy-390xx-vdpau-driver [amd64 i386 armhf],
+driver_suggests_Debian	+= nvidia-legacy-340xx-vdpau-driver [amd64 i386 armhf],
+driver_suggests_Ubuntu	+= libvdpau-va-gl1 [linux-any],
+driver_suggests		+= vdpau-driver,
+
+VENDOR	:= $(shell dpkg-vendor --derives-from Ubuntu && echo Ubuntu || echo Debian)
+
 # see FEATURE AREAS in dpkg-buildflags(1)
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
-
-# see ENVIRONMENT in dpkg-buildflags(1)
-# package maintainers to append CFLAGS
-#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
 
 # Disable if dependencies are not available, like on buildd
 # arch-dependent builds, as they are Build-Depends-Indep
@@ -43,3 +52,8 @@ override_dh_bugfiles:
 # ignore the plugin
 override_dh_makeshlibs:
 	dh_makeshlibs -Xvdpau/libvdpau_trace.so.1
+
+override_dh_gencontrol:
+	dh_gencontrol -- \
+		-V'driver:Depends=$(driver_depends_$(VENDOR)), $(driver_depends)' \
+		-V'driver:Suggests=$(driver_suggests_$(VENDOR)), $(driver_suggests)'

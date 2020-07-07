@@ -80,13 +80,10 @@ Section: video
 Architecture: any
 Multi-Arch: same
 Depends:
- libvdpau-va-gl1 [linux-any],
- mesa-vdpau-drivers [linux-any kfreebsd-any],
+ ${driver:Depends},
  ${misc:Depends}
 Suggests:
- nvidia-vdpau-driver [amd64 i386],
- nvidia-legacy-340xx-vdpau-driver [amd64 i386],
- nvidia-legacy-304xx-vdpau-driver [amd64 i386],
+ ${driver:Suggests},
 Description: Video Decode and Presentation API for Unix (driver metapackage)
  VDPAU (Video Decode and Presentation API for Unix) is an open source
  library (libvdpau) and API designed by NVIDIA originally for its GeForce
