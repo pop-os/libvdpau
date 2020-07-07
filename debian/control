@@ -7,7 +7,7 @@ Uploaders:
  Vincent Cheng <vcheng@debian.org>,
  Luca Boccassi <bluca@debian.org>
 Build-Depends:
- debhelper-compat (= 12),
+ debhelper-compat (= 13),
  meson (>= 0.41),
  pkg-config,
  libx11-dev,
