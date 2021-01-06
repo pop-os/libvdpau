@@ -1,4 +1,4 @@
-libvdpau (1.4-3) UNRELEASED; urgency=low
+libvdpau (1.4-3) unstable; urgency=low
 
   [ Andreas Beckmann ]
   * Bump watch version to 4. No changes needed.
@@ -10,7 +10,7 @@ libvdpau (1.4-3) UNRELEASED; urgency=low
   [ Debian Janitor ]
   * Set upstream metadata fields: Bug-Submit.
 
- -- Debian Janitor <janitor@jelmer.uk>  Thu, 13 Aug 2020 06:24:20 -0000
+ -- Andreas Beckmann <anbe@debian.org>  Wed, 06 Jan 2021 20:25:37 +0100
 
 libvdpau (1.4-2) unstable; urgency=medium
 
