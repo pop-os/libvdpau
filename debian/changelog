@@ -1,5 +1,8 @@
 libvdpau (1.4-3) UNRELEASED; urgency=low
 
+  [ Andreas Beckmann ]
+  * Bump watch version to 4. No changes needed.
+
   [ Vincent Cheng ]
   * Remove myself from Uploaders.
 
