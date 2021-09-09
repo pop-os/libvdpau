@@ -7,7 +7,7 @@ Uploaders:
  Luca Boccassi <bluca@debian.org>
 Build-Depends:
  debhelper-compat (= 13),
- meson (>= 0.41),
+ meson,
  pkg-config,
  libx11-dev,
  x11proto-dri2-dev,
