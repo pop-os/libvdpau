@@ -1,9 +1,18 @@
-libvdpau (1.4-4) UNRELEASED; urgency=medium
+libvdpau (1.5-1) unstable; urgency=medium
 
+  [ Debian Janitor ]
   * Remove constraints unnecessary since buster:
     + Build-Depends: Drop versioned constraint on meson.
 
- -- Debian Janitor <janitor@jelmer.uk>  Thu, 09 Sep 2021 09:42:53 -0000
+  [ Luca Boccassi ]
+  * d/watch: remove signature download, release tarball is no longer
+    signed.
+  * New upstream release.
+  * Bump Standards-Version to 4.6.0, no changes.
+  * Bump d/copyright year range.
+  * Set Homepage to landing page, and Source to Gitlab repo.
+
+ -- Luca Boccassi <bluca@debian.org>  Thu, 10 Mar 2022 22:33:21 +0000
 
 libvdpau (1.4-3) unstable; urgency=low
 
