@@ -8,7 +8,7 @@ Uploaders:
 Build-Depends:
  debhelper-compat (= 13),
  meson,
- pkg-config,
+ pkgconf,
  libx11-dev,
  x11proto-dri2-dev,
  libxext-dev,
