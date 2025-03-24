@@ -1,10 +1,7 @@
 Source: libvdpau
 Section: libs
 Priority: optional
-Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
-Uploaders:
- Andreas Beckmann <anbe@debian.org>,
- Luca Boccassi <bluca@debian.org>
+Maintainer: System76 <info@system76.com>
 Build-Depends:
  debhelper-compat (= 13),
  meson,
