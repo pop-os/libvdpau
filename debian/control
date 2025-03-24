@@ -5,7 +5,7 @@ Maintainer: System76 <info@system76.com>
 Build-Depends:
  debhelper-compat (= 13),
  meson,
- pkgconf,
+ pkg-config,
  libx11-dev,
  x11proto-dri2-dev,
  libxext-dev,
