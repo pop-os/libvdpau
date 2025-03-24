@@ -1,3 +1,9 @@
+libvdpau (1.5-3pop1) jammy; urgency=medium
+
+  * Backport to Jammy
+
+ -- Michael Aaron Murphy <michael@mmurphy.dev>  Mon, 24 Mar 2025 23:25:04 +0100
+
 libvdpau (1.5-3) unstable; urgency=medium
 
   * Switch from pkg-config to pkgconf
